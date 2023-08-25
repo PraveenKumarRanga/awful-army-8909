@@ -40,7 +40,7 @@ public class App
         		ServiceProviderUI.registerProvider(sc);
         		break;
         	case 4:
-//        		ServiceProviderUI.loginProvider(sc);
+        		ServiceProviderUI.loginProvider(sc);
         		break;
         	case 0:
         		System.out.println("=====================================================");
