@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.masai.entity.ServiceProvider;
 import com.masai.exception.DuplicateDataException;
+import com.masai.exception.NoRecordFound;
 import com.masai.services.ProviderService;
 import com.masai.services.ProviderServiceImpl;
 
@@ -33,6 +34,34 @@ public class ServiceProviderUI {
 		catch(DuplicateDataException e) {
 			System.out.println(e.getMessage());
 		}
+	}
+
+	public static void loginProvider(Scanner sc) {
+		
+		System.out.println("Enter username");
+		String username = sc.next();
+		
+		System.out.println("Enter password");
+		String password = sc.next();
+		
+		ProviderService service = new ProviderServiceImpl();
+		
+		try {
+			
+			service.logIn(username, password);
+			providerMenu(sc);
+			
+		}catch(NoRecordFound e) {
+			e.getMessage();
+			
+		}
+		
+		
+	}
+
+	public static void providerMenu(Scanner sc) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
