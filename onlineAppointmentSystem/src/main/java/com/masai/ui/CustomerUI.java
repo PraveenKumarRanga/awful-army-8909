@@ -32,7 +32,7 @@ public class CustomerUI {
 		
 		} catch (DuplicateDataException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Customer already exists...");
 		}
 		
 	}
@@ -53,7 +53,7 @@ public class CustomerUI {
 			service.logIn(username, password);
 			customerMenu(sc);
 		}catch(NoRecordFound e) {
-			e.getMessage();
+			System.out.println("Please enter valid username and password...");
 		}
 		
 		

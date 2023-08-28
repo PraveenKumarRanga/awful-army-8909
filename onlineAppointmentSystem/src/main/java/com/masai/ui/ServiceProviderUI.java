@@ -26,13 +26,13 @@ public class ServiceProviderUI {
 		
 		try {
 			service.regProvider(provider);
-			System.out.println("===================================================");
-			System.out.println("  Representative account registered successfully");
-			System.out.println("===================================================");
+			System.out.println("============================================================");
+			System.out.println("  Service Provider account registered successfully");
+			System.out.println("============================================================");
 		
 		}
 		catch(DuplicateDataException e) {
-			System.out.println(e.getMessage());
+			System.out.println("Service provider already exists");
 		}
 	}
 
@@ -52,7 +52,7 @@ public class ServiceProviderUI {
 			providerMenu(sc);
 			
 		}catch(NoRecordFound e) {
-			e.getMessage();
+			System.out.println("Please enter valid username and password...");
 			
 		}
 		
@@ -60,6 +60,77 @@ public class ServiceProviderUI {
 	}
 
 	public static void providerMenu(Scanner sc) {
+		
+		int choice;
+	do {
+		
+		System.out.println("===================================================================================");
+		System.out.println("| Press 1 view appointment details with customer details                          |");
+		System.out.println("| Press 2 Set up availability and working hours with service informantion         |");
+		System.out.println("| Press 3 open available slots for appointment                                    |");
+		System.out.println("| Press 4 view feedback                                                           |");
+		System.out.println("| Press 5 delete account                                                          |");
+		System.out.println("| Press 6 change password                                                         |");
+		System.out.println("| Press 0 logOut                                                                  |");
+		System.out.println("===================================================================================");
+		
+		choice = sc.nextInt();
+		
+		switch(choice) {
+		
+		case 1:
+			viewAppointments();
+			break;
+		case 2:
+			setAvaillability(sc);
+			break;
+		case 3:
+			openSlots(sc);
+			break;
+		case 4:
+			viewFeedback();
+			break;
+		case 5:
+			deleteAccount(sc);
+			break;
+		case 6:
+			changePassword(sc);
+			break;
+		case 0:
+			System.out.println("Thank you, visit again...");
+			break;
+		default:
+			System.out.println("Enter valid choice...");
+		}
+	}while(choice!=0);
+	}
+
+	private static void changePassword(Scanner sc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void deleteAccount(Scanner sc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void viewFeedback() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void openSlots(Scanner sc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void setAvaillability(Scanner sc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void viewAppointments() {
 		// TODO Auto-generated method stub
 		
 	}
