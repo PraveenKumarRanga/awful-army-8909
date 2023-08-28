@@ -26,7 +26,7 @@ public class ProviderDaoImpl implements ProviderDao{
 			em = EMUtils.getEntityManager();
 			et = em.getTransaction();
 			
-			Query query = em.createQuery("SELECT COUNT(P) FROM ServiceProvider p WHERE email = :email");
+			Query query = em.createQuery("SELECT COUNT(p) FROM ServiceProvider p WHERE email = :email");
 							query.setParameter("email", provider.getEmail());
 							
 			if((long) query.getSingleResult()>0) {
