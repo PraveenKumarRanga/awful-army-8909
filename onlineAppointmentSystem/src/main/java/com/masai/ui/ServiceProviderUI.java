@@ -105,6 +105,10 @@ public class ServiceProviderUI {
 	}while(choice!=0);
 	}
 
+	
+	// methods for menu
+	
+	
 	private static void changePassword(Scanner sc) {
 		// TODO Auto-generated method stub
 		
